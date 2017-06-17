@@ -7,8 +7,8 @@ endif
 let g:colors_name = "BlueAndGreens"
 
 " Colors for vim modes
-hi Normal cterm=none ctermfg=lightgrey ctermbg=233 guifg=#fffadc guibg=#1a1a1a
-hi Visual cterm=bold ctermfg=16        ctermbg=darkgreen guifg=black guibg=lightgreen
+hi Normal cterm=none ctermfg=lightgrey ctermbg=233       guifg=#fffadc guibg=#1a1a1a
+hi Visual cterm=bold ctermfg=16        ctermbg=darkgreen guifg=black   guibg=lightgreen
 
 " Special character colors
 hi NonText    term=none ctermfg=darkred guifg=#aa2828
@@ -53,13 +53,13 @@ hi Cursor     gui=reverse guifg=#bfbfef guibg=Black
 hi lCursor    gui=none    guifg=fg      guibg=bg
 
 " Colors for syntax highlighting
-hi Comment    term=none cterm=bold ctermfg=darkgrey ctermbg=none    gui=none guifg=#7f7f7f guibg=bg
-hi Constant   term=none cterm=none ctermfg=green    ctermbg=none    gui=none guifg=#d7beff guibg=bg
-hi Special    term=none cterm=none ctermfg=blue     ctermbg=none    gui=none guifg=#aad28c guibg=bg
-hi Identifier term=none cterm=none ctermfg=darkcyan ctermbg=none    gui=none guifg=#37afff guibg=bg
-hi Statement  term=none cterm=none ctermfg=darkcyan ctermbg=none    gui=none guifg=#37afff guibg=bg
-hi PreProc    term=none cterm=none ctermfg=yellow   ctermbg=none    gui=none guifg=#e6cd8c guibg=bg
-hi Type       term=none cterm=none ctermfg=cyan     ctermbg=none    gui=none guifg=#5ad5d5 guibg=bg
-hi Ignore     term=none cterm=bold ctermfg=grey     ctermbg=none    gui=none guifg=grey    guibg=bg
-hi Error      term=none cterm=bold ctermfg=red      ctermbg=none    gui=bold guifg=#f0873c guibg=#1a1a1a
-hi Todo       term=none cterm=bold ctermfg=darkblue ctermbg=blue    gui=bold guifg=yellow  guibg=blue
+hi Comment    term=none cterm=bold ctermfg=darkgrey ctermbg=none gui=none guifg=#7f7f7f guibg=bg
+hi Constant   term=none cterm=none ctermfg=green    ctermbg=none gui=none guifg=#d7beff guibg=bg
+hi Special    term=none cterm=none ctermfg=blue     ctermbg=none gui=none guifg=#aad28c guibg=bg
+hi Identifier term=none cterm=none ctermfg=darkcyan ctermbg=none gui=none guifg=#37afff guibg=bg
+hi Statement  term=none cterm=none ctermfg=darkcyan ctermbg=none gui=none guifg=#37afff guibg=bg
+hi PreProc    term=none cterm=none ctermfg=yellow   ctermbg=none gui=none guifg=#e6cd8c guibg=bg
+hi Type       term=none cterm=none ctermfg=cyan     ctermbg=none gui=none guifg=#5ad5d5 guibg=bg
+hi Ignore     term=none cterm=bold ctermfg=grey     ctermbg=none gui=none guifg=grey    guibg=bg
+hi Error      term=none cterm=bold ctermfg=red      ctermbg=none gui=bold guifg=#f0873c guibg=#1a1a1a
+hi Todo       term=none cterm=bold ctermfg=darkblue ctermbg=blue gui=bold guifg=yellow  guibg=blue

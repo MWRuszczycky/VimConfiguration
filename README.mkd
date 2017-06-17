@@ -1,0 +1,3 @@
+# My Vim configuration files
+
+These are setup to work with a Dvorak keyboard.
