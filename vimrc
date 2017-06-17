@@ -17,7 +17,10 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+" Maintain indentation level
+set autoindent
 
+" Setup the status line
 set statusline=                         " Reset
 set laststatus=2                        " Always show the status line
 set statusline+=%.20f                   " Full path truncated to 20 characters
