@@ -81,8 +81,8 @@ imap <leader>{ {}<esc>i
 imap <leader>$ $$<esc>i
 imap <leader>* **<esc>i
 imap <leader>** ****<esc>hi
-imap <leader>u __<esc>i
-imap <leader>uu ____<esc>hi
+imap <leader>_ __<esc>i
+imap <leader>__ ____<esc>hi
 imap <leader>c /**/<esc>hi
 imap <leader>b ``<esc>i
 imap <leader>p """"""<esc>hhi
