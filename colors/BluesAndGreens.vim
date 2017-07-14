@@ -55,7 +55,7 @@ hi lCursor    gui=none    guifg=fg      guibg=bg
 " Colors for syntax highlighting
 hi Comment    term=none cterm=bold ctermfg=darkgrey ctermbg=none gui=none guifg=#7f7f7f guibg=bg
 hi Constant   term=none cterm=none ctermfg=green    ctermbg=none gui=none guifg=#d7beff guibg=bg
-hi Special    term=none cterm=none ctermfg=blue     ctermbg=none gui=none guifg=#aad28c guibg=bg
+hi Special    term=none cterm=none ctermfg=38       ctermbg=none gui=none guifg=#aad28c guibg=bg
 hi Identifier term=none cterm=none ctermfg=darkcyan ctermbg=none gui=none guifg=#37afff guibg=bg
 hi Statement  term=none cterm=none ctermfg=darkcyan ctermbg=none gui=none guifg=#37afff guibg=bg
 hi PreProc    term=none cterm=none ctermfg=yellow   ctermbg=none gui=none guifg=#e6cd8c guibg=bg
