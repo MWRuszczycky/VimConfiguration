@@ -23,10 +23,10 @@ hi Question term=bold cterm=bold ctermfg=darkgreen ctermbg=none    gui=bold guif
 " Vim status lines, line numbers, etc.
 hi LineNr       term=bold cterm=none ctermfg=lightgrey ctermbg=none gui=none guibg=#1A1A1A  guifg=#DCDCDC
 hi StatusLine   term=bold cterm=bold ctermfg=white     ctermbg=235  gui=bold guifg=white    guibg=#1a1a1a
-hi StatusLineNC term=bold cterm=bold ctermfg=darkgrey  ctermbg=235  gui=bold guifg=darkgrey guibg=bg
+hi StatusLineNC term=bold cterm=bold ctermfg=16        ctermbg=23   gui=bold guifg=darkgrey guibg=bg
 hi VertSplit    term=bold cterm=bold ctermfg=white     ctermbg=none gui=bold guifg=white    guibg=bg
 hi Title        term=bold cterm=none ctermfg=green     ctermbg=none gui=bold guifg=#74ff74  guibg=bg
-hi ColorColumn  ctermbg=234 guibg=#2c2c2c
+hi ColorColumn                                         ctermbg=234                          guibg=#2c2c2c
 
 " Colors for matches (with :match Match /pattern/) and searches (with /pattern)
 hi Search     term=bold cterm=bold ctermfg=16 ctermbg=yellow gui=bold guifg=black guibg=yellow
