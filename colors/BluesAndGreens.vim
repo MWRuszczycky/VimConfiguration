@@ -61,5 +61,5 @@ hi Statement  term=none cterm=none ctermfg=darkcyan ctermbg=none gui=none guifg=
 hi PreProc    term=none cterm=none ctermfg=yellow   ctermbg=none gui=none guifg=#e6cd8c guibg=bg
 hi Type       term=none cterm=none ctermfg=cyan     ctermbg=none gui=none guifg=#5ad5d5 guibg=bg
 hi Ignore     term=none cterm=bold ctermfg=grey     ctermbg=none gui=none guifg=grey    guibg=bg
-hi Error      term=none cterm=bold ctermfg=red      ctermbg=none gui=bold guifg=#f0873c guibg=#1a1a1a
+hi Error      term=none cterm=bold ctermfg=214      ctermbg=none gui=bold guifg=#f0873c guibg=#1a1a1a
 hi Todo       term=none cterm=bold ctermfg=darkblue ctermbg=blue gui=bold guifg=yellow  guibg=blue
