@@ -54,11 +54,11 @@ hi lCursor    gui=none    guifg=fg      guibg=bg
 
 " Colors for syntax highlighting
 hi Comment    term=none cterm=bold ctermfg=darkgrey ctermbg=none gui=none guifg=#7f7f7f guibg=bg
-hi Constant   term=none cterm=none ctermfg=green    ctermbg=none gui=none guifg=#d7beff guibg=bg
-hi Special    term=none cterm=none ctermfg=79     ctermbg=none gui=none guifg=#aad28c guibg=bg
+hi Constant   term=none cterm=none ctermfg=41       ctermbg=none gui=none guifg=#d7beff guibg=bg
+hi Special    term=none cterm=none ctermfg=79       ctermbg=none gui=none guifg=#aad28c guibg=bg
 hi Identifier term=none cterm=bold ctermfg=114      ctermbg=none gui=none guifg=#37afff guibg=bg
 hi Statement  term=none cterm=none ctermfg=117      ctermbg=none gui=none guifg=#37afff guibg=bg
-hi PreProc    term=none cterm=none ctermfg=214      ctermbg=none gui=none guifg=#e6cd8c guibg=bg
+hi PreProc    term=none cterm=none ctermfg=185      ctermbg=none gui=none guifg=#e6cd8c guibg=bg
 hi Type       term=none cterm=none ctermfg=38       ctermbg=none gui=none guifg=#5ad5d5 guibg=bg
 hi Ignore     term=none cterm=bold ctermfg=grey     ctermbg=none gui=none guifg=grey    guibg=bg
 hi Error      term=none cterm=bold ctermfg=1        ctermbg=none gui=bold guifg=#f0873c guibg=#1a1a1a
