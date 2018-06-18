@@ -71,27 +71,27 @@ nnoremap <C-n> :bn<CR>
 nnoremap <C-x> :w<CR>:bn<CR>:bd#<CR>
 
 " Inline quick pairs
-imap <leader>' ''<esc>i
-imap <leader>" ""<esc>i
-imap <leader>q ``''<esc>hi
-imap <leader>( ()<esc>i
-imap <leader>[ []<esc>i
-imap <leader>< <><esc>i
-imap <leader>{ {}<esc>i
-imap <leader>$ $$<esc>i
-imap <leader>* **<esc>i
+imap <leader>'  ''<esc>i
+imap <leader>"  ""<esc>i
+imap <leader>qq ``''<esc>hi
+imap <leader>(  ()<esc>i
+imap <leader>[  []<esc>i
+imap <leader><  <><esc>i
+imap <leader>{  {}<esc>i
+imap <leader>$  $$<esc>i
+imap <leader>*  **<esc>i
 imap <leader>** ****<esc>hi
-imap <leader>_ __<esc>i
+imap <leader>_  __<esc>i
 imap <leader>__ ____<esc>hi
-imap <leader>c /**/<esc>hi
-imap <leader>b ``<esc>i
-imap <leader>p """"""<esc>hhi
+imap <leader>cc /**/<esc>hi
+imap <leader>bb ``<esc>i
+imap <leader>pp """"""<esc>hhi
 
 " Multiline quickpairs
 imap <leader>{<CR> {}<esc>i<CR><esc>O
-imap <leader>c<CR> /*<CR><CR><esc>i*/<esc>ki<space><space>
-imap <leader>b<CR> ```<CR>```<esc>ka
-imap <leader>p<CR> """<CR>"""<esc>ka
+imap <leader>cc<CR> /*<CR><CR><esc>i*/<esc>ki<space><space>
+imap <leader>bb<CR> ```<CR>```<esc>ka
+imap <leader>pp<CR> """<CR>"""<esc>ka
 
 " Set two color columns
 set cc=70,80
