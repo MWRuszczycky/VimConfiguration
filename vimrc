@@ -184,6 +184,9 @@ endif
 " Colorscheme
 colorscheme BluesAndGreens
 
+" Keep same transparency as the terminal
+hi Normal guibg=NONE ctermbg=NONE
+
 " Highligt tabs and extrawhitespace at end of lines
 highlight extrawhitespace ctermbg=darkred
 augroup removewhitespace
