@@ -20,6 +20,10 @@ set expandtab
 " Maintain indentation level
 set autoindent
 
+" Default backspace behavior: Can only backspace over what was just
+" entered since start of insert mode but not newlines or indents.
+set backspace=
+
 " Setup the status line
 set statusline=                         " Reset
 set laststatus=2                        " Always show the status line
