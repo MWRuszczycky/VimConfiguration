@@ -56,6 +56,10 @@ nnoremap k gkzz
 nnoremap o zzo
 nnoremap O zzO
 
+" Open new lines without leaving normal mode and keep centered
+nnoremap <leader>o zzo<esc>
+nnoremap <leader>O zzO<esc>
+
 " Map t to l
 vnoremap t l
 vnoremap l t
