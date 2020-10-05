@@ -62,4 +62,4 @@ hi PreProc    term=none cterm=none ctermfg=185      ctermbg=none gui=none guifg=
 hi Type       term=none cterm=none ctermfg=38       ctermbg=none gui=none guifg=#5ad5d5 guibg=bg
 hi Ignore     term=none cterm=bold ctermfg=grey     ctermbg=none gui=none guifg=grey    guibg=bg
 hi Error      term=none cterm=bold ctermfg=1        ctermbg=none gui=bold guifg=#f0873c guibg=#1a1a1a
-hi Todo       term=none cterm=bold ctermfg=darkblue ctermbg=blue gui=bold guifg=yellow  guibg=blue
+hi Todo       term=none cterm=bold ctermfg=16       ctermbg=31   gui=bold guifg=yellow  guibg=blue

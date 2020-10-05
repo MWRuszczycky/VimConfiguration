@@ -189,9 +189,11 @@ colorscheme BluesAndGreens
 " Keep same transparency as the terminal
 hi Normal guibg=NONE ctermbg=NONE
 
-" Highligt tabs and extrawhitespace at end of lines
-highlight extrawhitespace ctermbg=darkred
-augroup removewhitespace
+" Highlight unwanted whitespace and tabs
+highlight tabbedWhiteSpace   ctermbg=234
+highlight trailingWhiteSpace ctermbg=52
+augroup showUnwantedWhitespace
     autocmd!
-    autocmd BufWinEnter * match extrawhitespace /\(\s\+$\)\|\(\t\)/
+    autocmd BufWinEnter * syntax match tabbedWhiteSpace   /\(\t\)/
+    autocmd BufWinEnter * syntax match trailingWhiteSpace /\(\s\+$\)/
 augroup END
