@@ -121,12 +121,6 @@ augroup filetype_hs
     autocmd FileType haskell setlocal foldmethod=indent
 augroup END
 
-" Racket formatting
-augroup filetype_rkt
-    autocmd!
-    autocmd FileType racket setlocal expandtab shiftwidth=4 softtabstop=4
-    autocmd FileType racket setlocal foldmethod=indent
-
 " Markdown folds
 function! MarkdownLevel()
     let h = matchstr(getline(v:lnum), '^#\+')
