@@ -190,10 +190,10 @@ colorscheme BluesAndGreens
 hi Normal guibg=NONE ctermbg=NONE
 
 " Highlight unwanted whitespace and tabs
-highlight tabbedWhiteSpace   ctermbg=234
-highlight trailingWhiteSpace ctermbg=52
+highlight tabbedWS   ctermbg=234
+highlight trailingWS ctermbg=52
 augroup showUnwantedWhitespace
     autocmd!
-    autocmd BufWinEnter * syntax match tabbedWhiteSpace   /\(\t\)/
-    autocmd BufWinEnter * syntax match trailingWhiteSpace /\(\s\+$\)/
+    autocmd BufWinEnter * syntax match tabbedWS   /\(\t\)/    containedin=ALL
+    autocmd BufWinEnter * syntax match trailingWS /\(\s\+$\)/ containedin=ALL
 augroup END
