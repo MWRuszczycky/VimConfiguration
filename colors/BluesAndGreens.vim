@@ -7,8 +7,8 @@ endif
 let g:colors_name = "BlueAndGreens"
 
 " Colors for vim modes
-hi Normal cterm=none ctermfg=lightgrey ctermbg=233       guifg=#fffadc guibg=#1a1a1a
-hi Visual cterm=bold ctermfg=16        ctermbg=darkgreen guifg=black   guibg=lightgreen
+hi Normal cterm=none ctermfg=188 ctermbg=233       guifg=#fffadc guibg=#1a1a1a
+hi Visual cterm=bold ctermfg=16  ctermbg=darkgreen guifg=black   guibg=lightgreen
 
 " Special character colors
 hi NonText    term=none ctermfg=darkred guifg=#aa2828
@@ -39,8 +39,8 @@ hi WarningMsg term=bold cterm=none ctermfg=darkred ctermbg=none gui=bold guifg=c
 hi WildMenu   term=bold cterm=none ctermfg=white   ctermbg=none gui=none guifg=white   guibg=blue
 
 " Colors for code folding
-hi Folded     term=bold cterm=none ctermfg=lightblue ctermbg=none gui=none guifg=#afcfef guibg=bg
-hi FoldColumn term=bold cterm=none ctermfg=darkblue  ctermbg=grey gui=none guifg=#ffff74 guibg=#3f3f3f
+hi Folded     term=bold cterm=bold ctermfg=147 ctermbg=none gui=none guifg=#afcfef guibg=bg
+hi FoldColumn term=bold cterm=bold ctermfg=147 ctermbg=none gui=none guifg=#ffff74 guibg=#3f3f3f
 
 " Colors for diffing
 hi DiffAdd    term=bold cterm=bold ctermfg=16      ctermbg=darkcyan gui=none guifg=fg      guibg=black
@@ -53,13 +53,13 @@ hi Cursor     gui=reverse guifg=#bfbfef guibg=Black
 hi lCursor    gui=none    guifg=fg      guibg=bg
 
 " Colors for syntax highlighting
-hi Comment    term=none cterm=bold ctermfg=darkgrey ctermbg=none gui=none guifg=#7f7f7f guibg=bg
-hi Constant   term=none cterm=none ctermfg=41       ctermbg=none gui=none guifg=#d7beff guibg=bg
-hi Special    term=none cterm=none ctermfg=79       ctermbg=none gui=none guifg=#aad28c guibg=bg
-hi Identifier term=none cterm=bold ctermfg=114      ctermbg=none gui=none guifg=#37afff guibg=bg
-hi Statement  term=none cterm=none ctermfg=117      ctermbg=none gui=none guifg=#37afff guibg=bg
-hi PreProc    term=none cterm=none ctermfg=185      ctermbg=none gui=none guifg=#e6cd8c guibg=bg
-hi Type       term=none cterm=none ctermfg=38       ctermbg=none gui=none guifg=#5ad5d5 guibg=bg
-hi Ignore     term=none cterm=bold ctermfg=grey     ctermbg=none gui=none guifg=grey    guibg=bg
-hi Error      term=none cterm=bold ctermfg=1        ctermbg=none gui=bold guifg=#f0873c guibg=#1a1a1a
-hi Todo       term=none cterm=bold ctermfg=16       ctermbg=31   gui=bold guifg=yellow  guibg=blue
+hi Comment    term=none cterm=bold ctermfg=243  ctermbg=none gui=none guifg=#7f7f7f guibg=bg
+hi Constant   term=none cterm=none ctermfg=42   ctermbg=none gui=none guifg=#d7beff guibg=bg
+hi Special    term=none cterm=none ctermfg=158  ctermbg=none gui=none guifg=#aad28c guibg=bg
+hi Identifier term=none cterm=bold ctermfg=37   ctermbg=none gui=none guifg=#37afff guibg=bg
+hi Statement  term=none cterm=none ctermfg=117  ctermbg=none gui=none guifg=#37afff guibg=bg
+hi PreProc    term=none cterm=none ctermfg=187  ctermbg=none gui=none guifg=#e6cd8c guibg=bg
+hi Type       term=none cterm=none ctermfg=38   ctermbg=none gui=none guifg=#5ad5d5 guibg=bg
+hi Ignore     term=none cterm=bold ctermfg=grey ctermbg=none gui=none guifg=grey    guibg=bg
+hi Error      term=none cterm=bold ctermfg=168  ctermbg=none gui=bold guifg=#f0873c guibg=#1a1a1a
+hi Todo       term=none cterm=bold ctermfg=16   ctermbg=31   gui=bold guifg=yellow  guibg=blue
