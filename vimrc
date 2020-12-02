@@ -121,42 +121,47 @@ imap <leader>pp<CR> """<CR>"""<esc>ka
 " ===================================================================
 " Functions
 
-" =================================================================== 
+" ------------------------------------------------------------------- 
 " Folding
 
 " Markdown folds
-function! MarkdownLevel()
-    let h = matchstr(getline(v:lnum), '^#\+')
-    if empty(h) || len(h) == 1
-        return "="
+function! MarkdownLevel(lnum)
+    let str = getline(a:lnum)
+    let x = strlen( matchstr(str, '^#\+') )
+    " Code blocks often have single # denoting comments and we do not
+    " want to fold on these. So, only fold at ## and higher.
+    if x > 1
+        return ">" . (x - 1)
+    " All code blocks must provide a type for this to work correctly.
+    elseif str =~ '^```\w'
+        return 'a1'
+    elseif str =~ '^```'
+        return 's1'
+    elseif foldlevel(a:lnum - 1) != '-1'
+        return foldlevel(a:lnum - 1)
     else
-        return ">" . len(h - 1)
-    endif
+        return '='
 endfunction
 
 " LaTeX folds
-function! LatexLevel()
-    " Get the contents of the line
-    let str = getline(v:lnum)
-    if str =~ '^\\\(sub\)*section'
-        " Start a level-1 fold
+function! LatexLevel(lnum)
+    let str = getline(a:lnum)
+    if str =~ '^\\section'
         return '>1'
-    elseif str =~ '^\\paragraph'
-        " Start a level-2 fold
+    elseif str =~ '^\\subsection'
         return '>2'
+    elseif str =~ '^\\subsubsection'
+        return '>3'
+    elseif str =~ '^\\paragraph'
+        return '>4'
     elseif str =~ '^\\begin'
-        " Add one level to the previous fold level
         return 'a1'
     elseif str =~ '^\\end'
-        " Subtract one level from the previous fold level
-        return "s1"
-    " Check if a fold level has been assigned
-    elseif foldlevel(v:lnum-1) != "-1"
-        " Assign the previous level to keep from tracing way back
-        return foldlevel(v:lnum-1)
+        return 's1'
+    elseif foldlevel(a:lnum-1) != '-1'
+        return foldlevel(a:lnum - 1)
     else
-        " Trace back to find the fold level
-        return "="
+        return '='
     endif
 endfunction
 
@@ -183,7 +188,7 @@ augroup END
 " Markdown formatting
 augroup filetype_mkd
     autocmd!
-    autocmd FileType markdown setlocal foldexpr=MarkdownLevel()
+    autocmd FileType markdown setlocal foldexpr=MarkdownLevel(v:lnum)
     autocmd FileType markdown setlocal foldmethod=expr
 augroup END
 
@@ -191,8 +196,7 @@ augroup END
 " LaTeX formatting
 augroup filetype_tex
     autocmd!
-    autocmd FileType tex setlocal foldexpr=LatexLevel()
-    " Use foldexpr to determine the fold level of each line
+    autocmd FileType tex setlocal foldexpr=LatexLevel(v:lnum)
     autocmd FileType tex setlocal foldmethod=expr
 augroup END
 
