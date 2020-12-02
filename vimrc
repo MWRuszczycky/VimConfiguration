@@ -1,5 +1,8 @@
 execute pathogen#infect()
 
+" =================================================================== 
+" Settings
+
 set number
 set display+=lastline
 " Do not make automatic backup files
@@ -24,7 +27,15 @@ set autoindent
 " entered since start of insert mode but not newlines or indents.
 set backspace=
 
-" Setup the status line
+" Set two color columns
+set cc=70,80
+
+" Turn on syntax highlighting
+syntax enable
+
+" =================================================================== 
+" Status line
+
 set statusline=                         " Reset
 set laststatus=2                        " Always show the status line
 set statusline+=%.20f                   " Full path truncated to 20 characters
@@ -35,6 +46,9 @@ set statusline+=\ \|\ Col:\ %2c         " Column number
 set statusline+=\ \|\ Line:\ %4l\/%-L   " Line/total lines
 set statusline+=\ \|\ %p%%              " Percent file
 set statusline+=%k " Key
+
+" ====================================================================
+" Mappings
 
 " Remap the leader to comma
 let mapleader = ","
@@ -78,6 +92,9 @@ nnoremap <C-n> :bn<CR>
 " Write and delete buffer without closing window
 nnoremap <C-x> :w<CR>:bn<CR>:bd#<CR>
 
+" -------------------------------------------------------------------
+" Quick pairs
+
 " Inline quick pairs
 imap <leader>'  ''<esc>i
 imap <leader>"  ""<esc>i
@@ -101,25 +118,11 @@ imap <leader>cc<CR> /*<CR><CR><esc>i*/<esc>ki<space><space>
 imap <leader>bb<CR> ```<CR>```<esc>ka
 imap <leader>pp<CR> """<CR>"""<esc>ka
 
-" Set two color columns
-set cc=70,80
+" ===================================================================
+" Functions
 
-" Turn on syntax highlighting
-syntax enable
-
-" Python formatting
-augroup filetype_py
-    autocmd!
-    autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
-    autocmd FileType python setlocal foldmethod=indent
-augroup END
-
-" Haskell formatting
-augroup filetype_hs
-    autocmd!
-    autocmd FileType haskell setlocal expandtab shiftwidth=4 softtabstop=4
-    autocmd FileType haskell setlocal foldmethod=indent
-augroup END
+" =================================================================== 
+" Folding
 
 " Markdown folds
 function! MarkdownLevel()
@@ -130,13 +133,6 @@ function! MarkdownLevel()
         return ">" . len(h - 1)
     endif
 endfunction
-
-" Markdown formatting
-augroup filetype_mkd
-    autocmd!
-    autocmd FileType markdown setlocal foldexpr=MarkdownLevel()
-    autocmd FileType markdown setlocal foldmethod=expr
-augroup END
 
 " LaTeX folds
 function! LatexLevel()
@@ -164,6 +160,34 @@ function! LatexLevel()
     endif
 endfunction
 
+" ===================================================================
+" Formatting by file type
+
+" -------------------------------------------------------------------
+" Python formatting
+augroup filetype_py
+    autocmd!
+    autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+    autocmd FileType python setlocal foldmethod=indent
+augroup END
+
+" -------------------------------------------------------------------
+" Haskell formatting
+augroup filetype_hs
+    autocmd!
+    autocmd FileType haskell setlocal expandtab shiftwidth=4 softtabstop=4
+    autocmd FileType haskell setlocal foldmethod=indent
+augroup END
+
+" -------------------------------------------------------------------
+" Markdown formatting
+augroup filetype_mkd
+    autocmd!
+    autocmd FileType markdown setlocal foldexpr=MarkdownLevel()
+    autocmd FileType markdown setlocal foldmethod=expr
+augroup END
+
+" -------------------------------------------------------------------
 " LaTeX formatting
 augroup filetype_tex
     autocmd!
@@ -172,16 +196,24 @@ augroup filetype_tex
     autocmd FileType tex setlocal foldmethod=expr
 augroup END
 
+" ===================================================================
+" Colors
+
+" -------------------------------------------------------------------
 " Setting the cursor color based on mode
+
 if &term =~ "xterm\\|rxvt"
   " Use a light grey cursor in insert mode
   let &t_SI = "\<Esc>]12;darkgrey\x7"
-  " Use a orange cursor otherwise
+  " Use a magenta cursor otherwise
   let &t_EI = "\<Esc>]12;darkmagenta\x7"
   silent !echo -ne "\033]12;darkmagenta\007"
   " Reset cursor when vim exits
   autocmd VimLeave * silent !echo -ne "\033]12;lightgrey\007"
 endif
+
+" -------------------------------------------------------------------
+" Highlighting & color schemes
 
 " Colorscheme
 colorscheme BluesAndGreens
