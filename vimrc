@@ -20,6 +20,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
 " Maintain indentation level
 set autoindent
 
@@ -86,7 +87,7 @@ nnoremap <C-t> <C-W><right>
 nnoremap <C-w> <C-W><down>
 nnoremap <C-c> <C-W><up>
 
-" Cycling between buffers in a singel window
+" Cycling between buffers in a single window
 nnoremap <C-n> :bn<CR>
 
 " Write and delete buffer without closing window
@@ -259,13 +260,13 @@ augroup END
 " Setting the cursor color based on mode
 
 if &term =~ "xterm\\|rxvt"
-  " Use a light grey cursor in insert mode
-  let &t_SI = "\<Esc>]12;darkgrey\x7"
-  " Use a magenta cursor otherwise
-  let &t_EI = "\<Esc>]12;darkmagenta\x7"
-  silent !echo -ne "\033]12;darkmagenta\007"
-  " Reset cursor when vim exits
-  autocmd VimLeave * silent !echo -ne "\033]12;lightgrey\007"
+    " Use a light grey cursor in insert mode
+    let &t_SI = "\<Esc>]12;darkgrey\x7"
+    " Use a magenta cursor otherwise
+    let &t_EI = "\<Esc>]12;darkmagenta\x7"
+    silent !echo -ne "\033]12;darkmagenta\007"
+    " Reset cursor when vim exits
+    autocmd VimLeave * silent !echo -ne "\033]12;lightgrey\007"
 endif
 
 " -------------------------------------------------------------------
