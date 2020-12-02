@@ -165,6 +165,38 @@ function! LatexLevel(lnum)
     endif
 endfunction
 
+" Bash folds
+function! BashLevel(lnum)
+    let str = getline(a:lnum)
+    " Start a level-1 fold for each function
+    if str =~ '{$'
+        return '>1'
+    elseif str =~ '^}'
+        return '<1'
+    " Add level at if, case, while, until and for. Only whitespace
+    " may proceed these keywords if the fold is to be recognized.
+    elseif str =~ '^ *\(if\|case\|for\|while\|until\) '
+        return 'a1'
+    " Folds over if, case, while, until and for must have their final
+    " keyword on a separate line with no trailing whitespace.
+    elseif str =~ '^ *\(fi\|done\|esac\)$'
+        return 's1'
+    " Any non-whitespace that starts a line and is not part of an if
+    " control block will reset the foldlevel to 0. The else keyword
+    " must be on its own line with only preceding whitespace.
+    elseif str =~ '^ *else$'
+        return '='
+    elseif str =~ '^ *elif '
+        return '='
+    elseif str =~ '^\S'
+        return '0'
+    " Handle everything else.
+    elseif foldlevel(a:lnum - 1) != '-1'
+        return foldlevel(a:lnum - 1)
+    else
+        return '='
+endfunction
+
 " ===================================================================
 " Formatting by file type
 
@@ -203,6 +235,14 @@ augroup END
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=indent
+augroup END
+
+" -------------------------------------------------------------------
+" Bash formatting
+augroup filetype_sh
+    autocmd!
+    autocmd FileType sh setlocal foldexpr=BashLevel(v:lnum)
+    autocmd FileType sh setlocal foldmethod=expr
 augroup END
 
 " ===================================================================
