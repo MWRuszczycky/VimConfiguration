@@ -172,7 +172,6 @@ endfunction
 " Python formatting
 augroup filetype_py
     autocmd!
-    autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
     autocmd FileType python setlocal foldmethod=indent
 augroup END
 
@@ -180,7 +179,6 @@ augroup END
 " Haskell formatting
 augroup filetype_hs
     autocmd!
-    autocmd FileType haskell setlocal expandtab shiftwidth=4 softtabstop=4
     autocmd FileType haskell setlocal foldmethod=indent
 augroup END
 
