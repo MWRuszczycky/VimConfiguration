@@ -198,6 +198,13 @@ augroup filetype_tex
     autocmd FileType tex setlocal foldmethod=expr
 augroup END
 
+" -------------------------------------------------------------------
+" Vimscript formatting
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=indent
+augroup END
+
 " ===================================================================
 " Colors
 
