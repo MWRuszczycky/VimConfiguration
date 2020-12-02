@@ -245,6 +245,13 @@ augroup filetype_sh
     autocmd FileType sh setlocal foldmethod=expr
 augroup END
 
+" ---------------------------------------------------------------------
+" HTML formatting
+augroup filetype_html
+    autocmd!
+    autocmd FileType html setlocal foldmethod=indent
+augroup END
+
 " ===================================================================
 " Colors
 
