@@ -253,6 +253,14 @@ augroup filetype_html
     autocmd FileType html setlocal foldmethod=indent
 augroup END
 
+" -------------------------------------------------------------------
+" Racket formatting
+
+augroup filetype_rkt
+    autocmd!
+    autocmd FileType racket setlocal foldmethod=indent
+augroup END
+
 " ===================================================================
 " Colors
 
